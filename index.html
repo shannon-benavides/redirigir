@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirección Automática</title>
+  <script type="text/javascript">
+    var pages = [
+      "https://sites.google.com/casinoexpress.cl/casinoprueba/p%C3%A1gina-1",
+      "https://sites.google.com/casinoexpress.cl/casinoprueba/pagina-2",
+      "https://sites.google.com/casinoexpress.cl/casinoprueba/pagina-3"
+    ];
+
+    var currentPage = 0;
+
+    function changePage() {
+      window.location.href = pages[currentPage];
+      currentPage = (currentPage + 1) % pages.length; // Repite las páginas en un ciclo
+    }
+
+    setInterval(changePage, 5000); // Cambia cada 10 segundos
+  </script>
+</head>
+<body>
+  <p>La página cambiará automáticamente cada 5 segundos.</p>
+</body>
+</html>
